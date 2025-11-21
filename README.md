@@ -1,6 +1,8 @@
 # Transporte Inteligente de Vacinas
 O objetivo deste estudo é demonstrar a viabilidade e a eficácia de um sistema de IoT para o transporte seguro de imunobiológicos. Ao assegurar que as vacinas mantenham sua qualidade desde a fabricação até o ponto de aplicação, a solução proposta não apenas reduz o desperdício, mas também fortalece a infraestrutura de saúde, promovendo um acesso mais seguro e equitativo à imunização em larga escala. Dessa forma, o projeto se alinha diretamente aos princípios do Objetivo de Desenvolvimento Sustentável (ODS) 3, que busca garantir saúde e bem-estar para todos.
 
+O projeto foi pensado para ser simples, acessível e de baixo custo, podendo ser reproduzido por estudantes, pesquisadores e profissionais que desejem criar um sistema básico de monitoramento IoT
+
 Este protótipo realiza o monitoramento de temperatura e umidade utilizando um ESP32 e o sensor DHT22. O ESP32 lê os dados do sensor, verifica se estão dentro dos limites ideais para transporte de vacinas e aciona LEDs indicadores:
 
 - LED verde: condições adequadas
@@ -30,7 +32,7 @@ Cada publicação é enviada em formato JSON, contendo:
 { "temperatura": XX.X, "umidade": XX.X }
 ```
 
-📌 Software desenvolvido + documentação do código
+# 📌 Software desenvolvido + documentação do código
 <br />O code do firmware está no arquivo: main.py
 <br />O código:
 - Conecta ao Wi-Fi
@@ -42,7 +44,7 @@ Cada publicação é enviada em formato JSON, contendo:
 - Publica no tópico vacina/dados
 - Aguarda 1 minuto (ou 30 segundos no vídeo)
 
-📌 Descrição do hardware utilizado
+# 📌 Descrição do hardware utilizado
 <br />🖥 Plataforma
 ESP32 DevKit V1
 - Wi-Fi + Bluetooth
@@ -67,4 +69,29 @@ O projeto foi montado em:
 <br />LED verde → GPIO 4
 <br />LED vermelho → GPIO 2
 
-O projeto foi pensado para ser simples, acessível e de baixo custo, podendo ser reproduzido por estudantes, pesquisadores e profissionais que desejem criar um sistema básico de monitoramento IoT
+# 📌 Documentação das interfaces, protocolos e comunicação
+📶 Comunicação Wi-Fi
+
+O ESP32 conecta-se ao roteador usando TCP/IP:
+```
+WIFI_SSID = "Wokwi-GUEST"
+WIFI_PASS = ""
+```
+🟦 Protocolo MQTT
+
+Foi escolhido o broker público:
+```
+mqtt-dashboard.com 
+```
+
+💬 Fluxo de comunicação
+ESP32 → Wi-Fi → Broker MQTT → Cliente MQTT Explorer
+
+# Comunicação/controle via Internet (TCP/IP) + MQTT
+O projeto atende totalmente esse requisito:
+
+<br />✔ O ESP32 se conecta via Wi-Fi (TCP/IP)
+<br />✔ Envia mensagens para o servidor MQTT
+<br />✔ As mensagens são acessadas via internet por qualquer dispositivo conectado
+<br />✔ Testado no MQTT Explorer
+
