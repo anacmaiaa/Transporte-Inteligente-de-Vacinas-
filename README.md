@@ -42,7 +42,7 @@ Cada publicação é enviada em formato JSON, contendo:
 - Aciona LEDs
 - Monta JSON
 - Publica no tópico vacina/dados
-- Aguarda 1 minuto (ou 30 segundos no vídeo)
+- Aguarda 1 minuto 
 
 # 📌 Descrição do hardware utilizado
 <br />🖥 Plataforma
@@ -52,7 +52,11 @@ ESP32 DevKit V1
 - 520 KB RAM
 
 🌡 Sensores
-DHT22 – temperatura e umidade
+<br />BME280 - temperatura, umidade e pressão (utilizado durante o projeto teórico)
+- Alimentação: 3.3V
+- comunicação I2C/SPI
+
+DHT22 – temperatura e umidade (utilizado no simulador Wokwi)
 - Alimentação: 3.3V
 - Precisão: Temperatura ±0.5°C e Umidade ±2%
 - Comunicação digital (protocolo próprio de um fio)
