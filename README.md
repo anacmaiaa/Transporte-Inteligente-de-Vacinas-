@@ -1,4 +1,4 @@
-# Transporte Inteligente de Vacinas
+# Transporte Inteligente de Vacinas 🚚📦💉
 O objetivo deste estudo é demonstrar a viabilidade e a eficácia de um sistema de IoT para o transporte seguro de imunobiológicos. Ao assegurar que as vacinas mantenham sua qualidade desde a fabricação até o ponto de aplicação, a solução proposta não apenas reduz o desperdício, mas também fortalece a infraestrutura de saúde, promovendo um acesso mais seguro e equitativo à imunização em larga escala. Dessa forma, o projeto se alinha diretamente aos princípios do Objetivo de Desenvolvimento Sustentável (ODS) 3, que busca garantir saúde e bem-estar para todos.
 
 O projeto foi pensado para ser simples, acessível e de baixo custo, podendo ser reproduzido por estudantes, pesquisadores e profissionais que desejem criar um sistema básico de monitoramento IoT
@@ -81,7 +81,7 @@ O ESP32 conecta-se ao roteador usando TCP/IP:
 WIFI_SSID = "Wokwi-GUEST"
 WIFI_PASS = ""
 ```
-🟦 Protocolo MQTT
+💻 Protocolo MQTT
 
 Foi escolhido o broker público:
 ```
