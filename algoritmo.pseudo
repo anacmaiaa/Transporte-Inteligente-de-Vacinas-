@@ -1,0 +1,17 @@
+iniciar ESP32
+conectar WiFi
+conectar broker MQTT
+
+loop a cada 60 segundos:
+    ler temperatura, umidade do DHT22
+    
+    se valores dentro do limite:
+        acender LED_verte
+        apagar LED_vermelho
+    senão:
+        acender LED_vermelho
+        apagar LED_verde
+    
+    criar mensagem JSON com temperatura e umidade
+    publicar mensagem no tópico "vacina/dados"
+fim loop
